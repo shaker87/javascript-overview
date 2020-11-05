@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article{
+            border: 2px solid red;
+            border-radius: 5px;
+            margin: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <article>
+            <p class="author">author-1</p>
+            <p class="description">description-1</p>
+            <h3>heading-1</h3>
+        </article>
+        <article class="special">
+            <p class="author">author-2</p>
+            <p class="description">description-2</p>
+            <h3>heading-2</h3>
+        </article>
+        <article class="special">
+            <p class="author">author-3</p>
+            <p class="description">description-3</p>
+            <h3>heading-3</h3>
+        </article>
+    </section>
+
+    <script>
+        var authors = document.querySelectorAll('.special h3');
+        for (var i = 0; i < authors.length; i++) {
+            var element = authors[i];
+            element.style.backgroundColor = 'red';
+        }
+    </script>
+</body>
+
+</html>

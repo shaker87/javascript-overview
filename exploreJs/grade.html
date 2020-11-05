@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Click the button to demonstrate the prompt box.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+
+
+    function myFunction() {
+
+    var gradeData = prompt('Enter your grade to check your letter grade');
+    var grade=getGrade(gradeData);
+    alert(grade);
+    }
+    function getGrade(gradeData) {
+        if (gradeData >= 90) {
+            return 'A';
+        }
+        if (gradeData >= 80) {
+            return 'B';
+        }
+        if (gradeData >= 70) {
+            return 'C';
+        }
+        if (gradeData >= 60) {
+            return 'D';
+        }
+        return 'F';
+    }
+
+    </script>
+
+    </body>
+    </html>
+</body>
+</html>

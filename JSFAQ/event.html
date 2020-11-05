@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+</head>
+<body>
+    <h1>exploring event</h1>
+    <button onclick="alert('ammu vat khabo')">Click Me</button>
+    <h1>exploring event</h1>
+    <button onclick="handleClick()">Click Me</button>
+
+    <button>button -1</button>
+    <button id="secondbtn">button -2</button>
+    <button>button -3</button>
+    <button id="fourthBtn">button -4</button>
+
+    <script>
+        function handleClick(){
+            console.log(new Date());
+        }
+
+        function bgChange(){
+            document.body.style.backgroundColor = 'cyan';
+            document.body.style.color = 'yellow';
+        }
+        var secondButton = document.getElementById('secondbtn');
+        secondButton.addEventListener('click', bgChange);
+        // secondButton.onclick = bgChange;
+        // secondButton.onclick = function(){
+        // //     console.log('second btn click');
+
+        // }
+
+        document.getElementById('fourthBtn').addEventListener('click', function(){
+            document.body.style.backgroundColor = 'green';
+            document.body.style.color = 'red';
+        })
+    </script>
+</body>
+</html>

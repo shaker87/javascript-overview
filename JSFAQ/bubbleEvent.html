@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bubbleEvent</title>
+</head>
+<body>
+    
+    <div id="container">
+        <h1>mylist</h1>
+        <ul id="myList">
+            <li id="first" class="item">item -1</li>
+            <li class="item">item -2</li>
+            <li class="item">item -3</li>
+            <li class="item">item -4</li>
+            <li class="item">item -5</li>
+        </ul>
+        <button id="addNew">Add New</button>
+    </div>
+    <script>
+        // var items = document.getElementsById('item');
+        // for (let i = 0; i < items.length; i++) {
+        //     var item = items[i];
+        //     item.addEventListener('click', function(event){
+        //         event.target.parentNode.removeChild(event.target);
+        //     })
+            
+        // }
+
+        document.getElementById('addNew').addEventListener('click', function(event){
+            var itemParent = document.getElementById('myList');
+            var newItem = document.createElement('li');
+            newItem.innerHTML = 'brand new item';
+            itemParent.appendChild(newItem);
+        })
+
+
+        // document.getElementById('first').addEventListener('click', function(event){
+        //     console.log('someone click me');
+        //     event.stopPropagation;
+        // })
+
+          document.getElementById('myList').addEventListener('click', function(event){
+            // console.log(this, event.target);
+            event.target.parentNode.removeChild(event.target);
+        })
+
+        // document.getElementById('container').addEventListener('click', function(event){
+        //     console.log('container click');
+        // })
+    </script>
+</body>
+</html>
